@@ -25,7 +25,7 @@
         </div>
       </header>
 
-      <section class="main-content container-lg">
+      <section class="main-content ">
           <div class="clock-segment">
             <div class="clock">
                 <div class="clock-heading heading">
@@ -54,16 +54,30 @@
                   <h3>Digital Timer</h3>
                   <h5><i class="fas fa-hourglass-start"></i></h5>
                 </div>
-                <div class="timer-contents"></div>
-                <div class="timer-btns"></div>
+                <div class="timer-contents">
+                  <!-- <input type="time" step='1' min="00:00:00" max="20:00:00"> -->
+
+                  <p><span><input id="timer-hr" type="number" max="60" min="0"></span> : <span><input id="timer-min" type="number"max="60" min="0"></span> : <span><input id="timer-sec" type="number"max="60" min="0"></span></p>
+                  <p class="timer-end timer-hidden" id = "tEnd">Your Time Has Ended</p>
+                </div>
+                <div class="timer-btns">
+                  <button type="button" class="btn btn-danger" id = "stopwatch-start" onclick="timerStart()">Start</button>
+                  <button type="button" class="btn btn-danger" id = "stopwatch-stop" onclick="timerPause()">Pause</button>
+                  <button type="button" class="btn btn-danger" id = "stopwatch-stop" onclick="timerReset()">Reset</button>
+                </div>
               </div>
               <div class="stopwatch">
                 <div class="stopwatch-heading heading">
                   <h3>Stopwatch</h3>
                   <h5><i class="fas fa-stopwatch"></i></h5>
                 </div>
-                <div class="stopwatch-contents"></div>
-                <div class="stopwatch-btns"></div>
+                <div class="stopwatch-contents">
+                  <p><span id="stop-min">0</span> : <span id="stop-sec">0</span> . <span id="stop-ms">0</span></p>
+                </div>
+                <div class="stopwatch-btns">
+                  <button type="button" class="btn btn-danger" id = "stopwatch-start" onclick="watchStart()">Start</button>
+                  <button type="button" class="btn btn-danger" id = "stopwatch-stop" onclick="watchStop()">Stop</button>
+                </div>
               </div>
           </div>
         
